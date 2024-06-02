@@ -12,7 +12,7 @@ const posts = defineCollection({
         .object({
             slug: s.path(),
             title: s.string().max(100),
-            description: s.string().max(200).optional(),
+            description: s.string().max(300).optional(),
             date: s.isodate(),
             published: s.boolean().default(true),
             tags: s.array(s.string()).optional(),

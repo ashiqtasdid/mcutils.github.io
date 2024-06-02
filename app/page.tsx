@@ -8,6 +8,7 @@ import { Separator } from "@/components/ui/separator";
 import HeroMid from "@/components/local/HeroMid";
 import FooterCred from "@/components/local/FooterCred";
 import HeroCentral from "@/components/local/HeroCentral";
+import HeroRes from "@/components/local/HeroRes";
 
 export default function Home() {
   return (
@@ -76,6 +77,7 @@ export default function Home() {
       <HeroMid />
       <Separator />
       <HeroCentral />
+      <HeroRes />
       <div className="h-[500px]" />
       <FooterCred />
     </main>
