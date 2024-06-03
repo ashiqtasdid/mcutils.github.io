@@ -9,6 +9,9 @@ import HeroMid from "@/components/local/HeroMid";
 import FooterCred from "@/components/local/FooterCred";
 import HeroCentral from "@/components/local/HeroCentral";
 import HeroRes from "@/components/local/HeroRes";
+import Reviews from "@/components/local/Reviews";
+import HeroBlockCMD from "@/components/local/HeroBlockCMD";
+import HeroBlockRes from "@/components/local/HeroBlockRes";
 
 export default function Home() {
   return (
@@ -78,6 +81,9 @@ export default function Home() {
       <Separator />
       <HeroCentral />
       <HeroRes />
+      <HeroBlockCMD />
+      <HeroBlockRes />
+      <Reviews />
       <div className="h-[500px]" />
       <FooterCred />
     </main>

@@ -11,7 +11,7 @@ const HeroRes = () => {
   });
   const scale = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
   const opacity = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-  const x = useTransform(scrollYProgress, [0, 0.7], [-490, 0]);
+  const x = useTransform(scrollYProgress, [0, 0.6], [-490, 0]);
 
   return (
     <div className="h-screen mx-auto flex justify-center items-center align-middle">

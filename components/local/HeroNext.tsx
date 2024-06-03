@@ -138,10 +138,10 @@ const HeroNext = () => {
             <Badge>Minecraft Utilities</Badge>
           </div>
           <div className="space-y-7">
-            <div className="font-bold justify-center text-center items-center flex text-6xl">
+            <h1 className="font-black justify-center text-center items-center flex text-6xl">
               Serving {data?.users.toLocaleString()} users across{" "}
               {data?.servers.toLocaleString()} servers
-            </div>
+            </h1>
             <div className="text-justify mx-3">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Laboriosam numquam itaque ex minus iusto repellendus quidem

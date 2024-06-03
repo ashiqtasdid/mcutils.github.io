@@ -13,9 +13,9 @@ const HeroMid = () => {
         transition={{ duration: 0.5 }}
         className="mx-10 space-y-5"
       >
-        <div className="text-5xl font-bold">
+        <h1 className="text-5xl font-black">
           We are an Open Source Discord Bot
-        </div>
+        </h1>
         <div>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
           sunt dignissimos voluptates ea, tempora, sequi quasi accusamus

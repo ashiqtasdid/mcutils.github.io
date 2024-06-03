@@ -87,7 +87,7 @@ export default async function PostPage({ params }: PostPageProps) {
         </h2>
         {/* author */}
         <p className="text-sm text-gray-500 dark:text-gray-400">
-          Author: {post.author}, Posted On: {formatDate(post.date)}
+          { post.author ?  `Author: ${post.author},` : ''} Posted On: {formatDate(post.date)}
         </p>
         <hr className="my-4" />
         <div className="dark:text-white">

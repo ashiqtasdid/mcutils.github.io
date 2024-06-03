@@ -169,9 +169,9 @@ const Hero: React.FC = () => {
           </div>
         </m.div>
         <div className="w-[60%] m-auto space-y-5">
-          <div className="font-bold justify-center text-center flex text-5xl">
+          <h1 className="font-black justify-center text-center flex text-5xl">
             Get Real-Time Info About Your Minecraft Server
-          </div>
+          </h1>
           <div className="font-medium text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ad
             nihil magnam consectetur fuga labore praesentium tenetur blanditiis
