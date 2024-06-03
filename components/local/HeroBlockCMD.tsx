@@ -32,7 +32,7 @@ const HeroBlockCMD = () => {
             </span>{" "}
             {"  "}
             <span className="dark:text-gray-200 text-gray-800">
-              eg: bedrick, oak_wood, obsidian, coal_block
+              eg: bedrock, oak_wood, obsidian, coal_block
             </span>
           </div>
           <span className="flex pt-3 pb-3">
