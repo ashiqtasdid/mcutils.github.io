@@ -90,7 +90,7 @@ const Nav = () => {
                     Team
                   </m.li>
                 </Link>
-                <Link href={"/"}>
+                <Link href={"/invite"}>
                   <m.li
                     className={`cursor-pointer ${
                       path === "/invite"
@@ -129,7 +129,7 @@ const Nav = () => {
                   <m.div className="hover:text-gray-500"><Link href={'/blog'}>Blog</Link></m.div>
                   <m.div className="hover:text-gray-500">Status</m.div>
                   <m.div className="hover:text-gray-500">Team</m.div>
-                  <m.div className="hover:text-gray-500">Invite</m.div>
+                  <m.div className="hover:text-gray-500"><Link href={'/invite'}>Invite</Link></m.div>
                   <ModeToggle />
                 </div>
               </SheetContent>

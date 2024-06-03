@@ -2,6 +2,7 @@ import React from "react";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaGithubSquare } from "react-icons/fa";
 import { GoAlertFill } from "react-icons/go";
+import Link from "next/link";
 
 const FooterMain = () => {
   return (
@@ -19,7 +20,7 @@ const FooterMain = () => {
         <div className="flex justify-evenly space-x-20">
           <div className="space-y-2">
             <div className="text-xl py-3">Product</div>
-            <div className="hover:cursor-pointer hover:underline">Invite</div>
+            <div className="hover:cursor-pointer hover:underline"><Link href={'/invite'}>Invite</Link></div>
             <div className="hover:cursor-pointer hover:underline">FAQ</div>
             <div className="hover:cursor-pointer hover:underline">EULA</div>
             <div className="hover:cursor-pointer hover:underline">Roadmap</div>
@@ -68,7 +69,9 @@ const FooterMain = () => {
         <div className="space-y-5">
           <div className="space-y-2">
             <div className="text-xl py-3">Product</div>
-            <div className="hover:cursor-pointer hover:underline">Invite</div>
+            <div className="hover:cursor-pointer hover:underline">
+              <Link href={"/invite"}>Invite</Link>
+            </div>
             <div className="hover:cursor-pointer hover:underline">FAQ</div>
             <div className="hover:cursor-pointer hover:underline">EULA</div>
             <div className="hover:cursor-pointer hover:underline">Roadmap</div>
