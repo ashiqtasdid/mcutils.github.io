@@ -7,7 +7,11 @@ import Nav from "@/components/local/Nav";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tag } from "@/components/local/tag";
-
+import FooterMain from "@/components/local/FooterMain";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaGithubSquare } from "react-icons/fa";
+import { GoAlertFill } from "react-icons/go";
+// import { motion as m } from "framer-motion";
 const POST_PER_PAGE = 5;
 
 interface BlogPageProps {
@@ -95,6 +99,8 @@ export default async function Blog({ searchParams }: BlogPageProps) {
           </Card>
         </div>
       </div>
+      <hr className="my-4 mx-4 dark:hidden"/>
+      <FooterMain />
     </div>
   );
 }

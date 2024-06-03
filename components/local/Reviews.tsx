@@ -12,7 +12,7 @@ const Reviews = () => {
   return (
     <div className="py-20 flex justify-between mx-20">
       <div className="w-[500px] space-y-8">
-        <div>
+        <div className="my-auto items-center align-middle">
           <h1 className=" font-black text-5xl">
             See what our users have to say
           </h1>

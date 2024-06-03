@@ -6,12 +6,12 @@ import HeroNext from "@/components/local/HeroNext";
 import { motion as m } from "framer-motion";
 import { Separator } from "@/components/ui/separator";
 import HeroMid from "@/components/local/HeroMid";
-import FooterCred from "@/components/local/FooterCred";
 import HeroCentral from "@/components/local/HeroCentral";
 import HeroRes from "@/components/local/HeroRes";
 import Reviews from "@/components/local/Reviews";
 import HeroBlockCMD from "@/components/local/HeroBlockCMD";
 import HeroBlockRes from "@/components/local/HeroBlockRes";
+import FooterMain from "@/components/local/FooterMain";
 
 export default function Home() {
   return (
@@ -84,8 +84,8 @@ export default function Home() {
       <HeroBlockCMD />
       <HeroBlockRes />
       <Reviews />
-      <div className="h-[500px]" />
-      <FooterCred />
+      <hr className="my-4 mx-4 dark:hidden"/>
+      <FooterMain />
     </main>
   );
 }

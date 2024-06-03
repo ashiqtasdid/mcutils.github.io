@@ -6,6 +6,7 @@ import { Metadata } from "next";
 import Nav from "@/components/local/Nav";
 import { Tag } from "@/components/local/tag";
 import { formatDate } from "@/lib/utils";
+import FooterMain from "@/components/local/FooterMain";
 
 interface PostPageProps {
   params: {
@@ -94,6 +95,8 @@ export default async function PostPage({ params }: PostPageProps) {
           <MDXContent code={post.body} />
         </div>
       </article>
+      <hr className="my-4 mx-4 dark:hidden"/>
+      <FooterMain /> 
     </div>
   );
 }
