@@ -24,7 +24,7 @@ const FooterMain = () => {
               <Link href={"/invite"}>Invite</Link>
             </div>
             <div className="hover:cursor-pointer hover:underline">FAQ</div>
-            <div className="hover:cursor-pointer hover:underline">EULA</div>
+            <div className="hover:cursor-pointer hover:underline"><Link href={'/EULA'}>EULA</Link></div>
             <div className="hover:cursor-pointer hover:underline">Roadmap</div>
           </div>
           <div className="space-y-2">
@@ -63,7 +63,7 @@ const FooterMain = () => {
           <div>Logo</div>
           <span className="text-sm">Copyright 2024, Minecraft Utilities. </span>
           <div className="text-sm">
-            <span className="pr-2 hover:underline">EULA</span>
+          <Link href={'/EULA'}> <span className="pr-2 hover:underline">EULA</span></Link>
             <span className="pr-2">·</span>
             <span className="pr-2 hover:underline">Terms</span>
           </div>
