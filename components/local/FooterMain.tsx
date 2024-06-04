@@ -51,7 +51,7 @@ const FooterMain = () => {
             <div className="text-xl py-3">Community</div>
             <div className="hover:cursor-pointer hover:underline">Blog</div>
             <div className="hover:cursor-pointer hover:underline">Twitter</div>
-            <div className="hover:cursor-pointer hover:underline">Discord</div>
+            <div className="hover:cursor-pointer hover:underline"><Link href={'https://discord.gg/jf28jcFJk9'} target="_blank">Discord</Link></div>
             <div className="hover:cursor-pointer hover:underline">
               Bot Testers
             </div>
