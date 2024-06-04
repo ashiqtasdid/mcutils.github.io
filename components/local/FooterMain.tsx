@@ -12,9 +12,15 @@ const FooterMain = () => {
           <div>Logo</div>
           <span className="text-sm">Copyright 2024, Minecraft Utilities. </span>
           <div className="text-sm">
-            <span className="pr-2 hover:underline">EULA</span>
+            <Link href={"/EULA"}>
+              {" "}
+              <span className="pr-2 hover:underline">EULA</span>
+            </Link>
             <span className="pr-2">·</span>
-            <span className="pr-2 hover:underline">Terms</span>
+            <Link href={"/terms"}>
+              {" "}
+              <span className="pr-2 hover:underline">Terms</span>
+            </Link>
           </div>
         </div>
         <div className="flex justify-evenly space-x-20">
@@ -23,8 +29,12 @@ const FooterMain = () => {
             <div className="hover:cursor-pointer hover:underline">
               <Link href={"/invite"}>Invite</Link>
             </div>
-            <div className="hover:cursor-pointer hover:underline">FAQ</div>
-            <div className="hover:cursor-pointer hover:underline"><Link href={'/EULA'}>EULA</Link></div>
+            <div className="hover:cursor-pointer hover:underline">
+              <Link href={"/faq"}>FAQ</Link>
+            </div>
+            <div className="hover:cursor-pointer hover:underline">
+              <Link href={"/EULA"}>EULA</Link>
+            </div>
             <div className="hover:cursor-pointer hover:underline">Roadmap</div>
           </div>
           <div className="space-y-2">
@@ -32,7 +42,14 @@ const FooterMain = () => {
             <div className="hover:cursor-pointer hover:underline">
               Documentation
             </div>
-            <div className="hover:cursor-pointer hover:underline"><Link href={'https://github.com/ashiqtasdid/minecraft-utilities'} target="_blank">Github</Link></div>
+            <div className="hover:cursor-pointer hover:underline">
+              <Link
+                href={"https://github.com/ashiqtasdid/minecraft-utilities"}
+                target="_blank"
+              >
+                Github
+              </Link>
+            </div>
             <div className="hover:cursor-pointer hover:underline">Status</div>
             <div className="hover:cursor-pointer hover:underline">
               Contributors
@@ -44,14 +61,22 @@ const FooterMain = () => {
             <div className="hover:cursor-pointer hover:underline">Contact</div>
             <div className="hover:cursor-pointer hover:underline">Team</div>
             <div className="hover:cursor-pointer hover:underline">
-              Press Release
+              <Link href={"/terms"}>Terms & Conditions</Link>
             </div>
           </div>
           <div className="space-y-2">
             <div className="text-xl py-3">Community</div>
-            <div className="hover:cursor-pointer hover:underline">Blog</div>
-            <div className="hover:cursor-pointer hover:underline">Twitter</div>
-            <div className="hover:cursor-pointer hover:underline"><Link href={'https://discord.gg/jf28jcFJk9'} target="_blank">Discord</Link></div>
+            <div className="hover:cursor-pointer hover:underline">
+              <Link href={"/blog"}>Blog</Link>
+            </div>
+            <div className="hover:cursor-pointer hover:underline">
+              <Link href={"https://x.com/mc_utilities"}>Twitter</Link>
+            </div>
+            <div className="hover:cursor-pointer hover:underline">
+              <Link href={"https://discord.gg/jf28jcFJk9"} target="_blank">
+                Discord
+              </Link>
+            </div>
             <div className="hover:cursor-pointer hover:underline">
               Bot Testers
             </div>
@@ -63,9 +88,15 @@ const FooterMain = () => {
           <div>Logo</div>
           <span className="text-sm">Copyright 2024, Minecraft Utilities. </span>
           <div className="text-sm">
-          <Link href={'/EULA'}> <span className="pr-2 hover:underline">EULA</span></Link>
+            <Link href={"/EULA"}>
+              {" "}
+              <span className="pr-2 hover:underline">EULA</span>
+            </Link>
             <span className="pr-2">·</span>
-            <span className="pr-2 hover:underline">Terms</span>
+            <Link href={"/terms"}>
+              {" "}
+              <span className="pr-2 hover:underline">Terms</span>
+            </Link>
           </div>
         </div>
         <div className="space-y-5">
@@ -74,8 +105,12 @@ const FooterMain = () => {
             <div className="hover:cursor-pointer hover:underline">
               <Link href={"/invite"}>Invite</Link>
             </div>
-            <div className="hover:cursor-pointer hover:underline">FAQ</div>
-            <div className="hover:cursor-pointer hover:underline">EULA</div>
+            <div className="hover:cursor-pointer hover:underline">
+              <Link href={"/faq"}>FAQ</Link>
+            </div>
+            <div className="hover:cursor-pointer hover:underline">
+              <Link href={"/EULA"}>EULA</Link>
+            </div>
             <div className="hover:cursor-pointer hover:underline">Roadmap</div>
           </div>
           <div className="space-y-2">
@@ -83,7 +118,14 @@ const FooterMain = () => {
             <div className="hover:cursor-pointer hover:underline">
               Documentation
             </div>
-            <div className="hover:cursor-pointer hover:underline">Github</div>
+            <div className="hover:cursor-pointer hover:underline">
+              <Link
+                href={"https://github.com/ashiqtasdid/minecraft-utilities"}
+                target="_blank"
+              >
+                Github
+              </Link>
+            </div>
             <div className="hover:cursor-pointer hover:underline">Status</div>
             <div className="hover:cursor-pointer hover:underline">
               Contributors
@@ -95,14 +137,20 @@ const FooterMain = () => {
             <div className="hover:cursor-pointer hover:underline">Contact</div>
             <div className="hover:cursor-pointer hover:underline">Team</div>
             <div className="hover:cursor-pointer hover:underline">
-              Press Release
+              <Link href={"/terms"}>Terms & Conditions</Link>
             </div>
           </div>
           <div className="space-y-2">
             <div className="text-xl py-3">Community</div>
-            <div className="hover:cursor-pointer hover:underline">Blog</div>
-            <div className="hover:cursor-pointer hover:underline">Twitter</div>
-            <div className="hover:cursor-pointer hover:underline">Discord</div>
+            <div className="hover:cursor-pointer hover:underline">
+              <Link href={"/blog"}>Blog</Link>
+            </div>
+            <Link href={"https://x.com/mc_utilities"}>Twitter</Link>
+            <div className="hover:cursor-pointer hover:underline">
+              <Link href={"https://discord.gg/jf28jcFJk9"} target="_blank">
+                Discord
+              </Link>
+            </div>
             <div className="hover:cursor-pointer hover:underline">
               Bot Testers
             </div>
@@ -114,10 +162,14 @@ const FooterMain = () => {
           <div className="mx-10 hover:underline">Sitemap</div>
           <div className="mx-10 flex space-x-2 pt-1">
             <span className="hover:cursor-pointer">
-              <FaSquareXTwitter />
+              <Link href={"https://x.com/mc_utilities"}>
+                <FaSquareXTwitter />
+              </Link>
             </span>
             <span className="hover:cursor-pointer">
-              <FaGithubSquare />
+              <Link href={"https://github.com/ashiqtasdid/minecraft-utilities"}>
+                <FaGithubSquare />
+              </Link>
             </span>
             <span className="hover:cursor-pointer">
               <GoAlertFill />
