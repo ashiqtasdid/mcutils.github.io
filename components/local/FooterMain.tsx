@@ -32,7 +32,7 @@ const FooterMain = () => {
             <div className="hover:cursor-pointer hover:underline">
               Documentation
             </div>
-            <div className="hover:cursor-pointer hover:underline">Github</div>
+            <div className="hover:cursor-pointer hover:underline"><Link href={'https://github.com/ashiqtasdid/minecraft-utilities'} target="_blank">Github</Link></div>
             <div className="hover:cursor-pointer hover:underline">Status</div>
             <div className="hover:cursor-pointer hover:underline">
               Contributors

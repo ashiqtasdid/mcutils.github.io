@@ -1,5 +1,6 @@
 import React, { Children, useRef } from "react";
 import { motion as m, useScroll, useTransform } from "framer-motion";
+import Link from "next/link"
 
 const HeroMidM = () => {
   return (
@@ -14,19 +15,23 @@ const HeroMidM = () => {
         <h1 className="text-3xl font-black">
           We are an Open Source Discord Bot
         </h1>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-          sunt dignissimos voluptates ea, tempora, sequi quasi accusamus
-          doloribus aliquam, fuga minima! Odio dolor, voluptatem rem officiis
-          dolorem obcaecati maxime saepe! Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Iste sit non a quos, at itaque consectetur rerum
-          numquam amet inventore. Illo quaerat esse labore, reprehenderit
-          eligendi a. Mollitia, totam unde?
+        <div className="text-justify">
+          <p>
+            Your privacy and protection are our top priorities. That&apos;s why
+            we are an open-source Discord bot. We understand the value of
+            open-source communities for fostering collaboration, trust, and
+            security. You can check out our code on our Github Repository, learn
+            more about our project, and even contribute to help us grow! We
+            welcome developers of all skill levels - join the community and make
+            a difference!
+          </p>
         </div>
         <div className="space-x-3">
+          <Link href={'https://github.com/ashiqtasdid/minecraft-utilities'} target="_blank">
           <button className="rounded-sm border-2 border-black bg-white px-3 py-1.5 font-normal text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-xl active:shadow-none">
             Github Repo
           </button>
+          </Link>
           <button className="rounded-sm border-2 border-zinc-800 bg-zinc-800 px-3 py-1.5 font-normal text-white transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-xl active:shadow-none">
             Learn more
           </button>

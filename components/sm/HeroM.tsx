@@ -90,14 +90,14 @@ const HeroM = () => {
             Get Real-Time Info About Your Minecraft Server
           </h1>
           <div className="font-medium text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ad
-            nihil magnam consectetur fuga labore praesentium tenetur blanditiis
-            veniam nam possimus impedit quasi ex suscipit voluptatibus, autem
-            vitae quo recusandae. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Neque, quidem accusamus qui eum laudantium odio
-            deleniti necessitatibus. Magnam, eligendi! Commodi iusto voluptas
-            deserunt ex pariatur tempora mollitia veritatis voluptatibus
-            repellat.
+            <p>
+            Do you have a Minecraft server? Curious about its status? Our
+              Discord bot lets you check any Minecraft Java Edition or Minecraft
+              Bedrock Edition server with a single command. Get information on
+              server status, player count, player list, version, platform, icon,
+              hostname, map, gamemode, plugins, mods, MOTD, and more! Try it now
+              using the button below.
+            </p>
           </div>
           <div className="flex justify-center items-center align-middle text-center">
             <Sheet>

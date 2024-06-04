@@ -5,6 +5,7 @@ import axios from "axios";
 import { Badge } from "@/components/ui/badge";
 import { animate, delay, motion as m } from "framer-motion";
 import { Separator } from "@radix-ui/react-separator";
+import Link from "next/link";
 
 const HeroNext = () => {
   const [data, setData] = useState<{ users: number; servers: number } | null>(
@@ -42,26 +43,38 @@ const HeroNext = () => {
             <Badge>Minecraft Utilities</Badge>
           </div>
           <div className="space-y-7">
-            <div className="font-bold justify-center text-center items-center flex text-6xl">
+            <h1 className="font-black justify-center text-center items-center flex text-6xl">
               Serving {data?.users.toLocaleString()} users across{" "}
               {data?.servers.toLocaleString()} servers
-            </div>
-            <div className="text-justify ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam numquam itaque ex minus iusto repellendus quidem
-              excepturi, voluptatibus, nesciunt placeat accusantium! Odio earum
-              saepe eveniet officia quam vero deleniti quia! Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Dolore maiores obcaecati
-              sint animi perspiciatis totam sed commodi nesciunt laboriosam et
-              non dolor tempora accusamus laudantium quos, rerum aliquid
-              veritatis illo.
+            </h1>
+            <div className="text-justify">
+              <p>
+              A feature-rich bot for Minecraft tools & utilities. Easily get
+              real-time information about a Minecraft server, player skin, UUID,
+              and much more! We are proudly serving{" "}
+              {data?.users.toLocaleString()} users across{" "}
+              {data?.servers.toLocaleString()} servers. You can check{" "}
+              <span className="font-bold">real-time</span> Minecraft Java
+              Edition / Minecraft Bedrock Edition servers. Also, you can check
+              out a player&apos;s{" "}
+              <span className="font-bold">Minecraft profile</span> by their
+              username. Get detailed information about{" "}
+              <span className="font-bold">Minecraft items & mobs</span> to
+              expand your skills and knowledge about Minecraft.{" "}
+              <span className="">Invite</span>{" "}
+              <span className="font-bold underline">Minecraft Utilities</span>{" "}
+              to your Discord server using the button below and elevate your
+              Minecraft experience.
+              </p>
             </div>
           </div>
           <div className="justify-center items-center flex pt-5">
             <div className="flex justify-between space-x-3">
-              <button className="rounded-sm border-2 border-black bg-white px-3 py-1.5 font-normal text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-xl active:shadow-none">
-                Invite
-              </button>
+              <Link href={"/invite"}>
+                <button className="rounded-sm border-2 border-black bg-white px-3 py-1.5 font-normal text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-xl active:shadow-none">
+                  Invite
+                </button>
+              </Link>
               <button className="rounded-sm border-2 border-zinc-800 bg-zinc-800 px-3 py-1.5 font-normal text-white transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-xl active:shadow-none">
                 Documentation
               </button>
@@ -125,7 +138,6 @@ const HeroNext = () => {
           </m.div>
         </div>
       </div>
-
     </div>
   );
 };

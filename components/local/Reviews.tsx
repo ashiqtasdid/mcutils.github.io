@@ -17,12 +17,11 @@ const Reviews = () => {
             See what our users have to say
           </h1>
         </div>
-        <div className="">
+        <div className="text-justify">
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi
-            deserunt ipsum repellendus vero dolore error ipsam autem adipisci
-            porro harum! Labore id non officia pariatur ea recusandae
-            praesentium dolorum alias.
+            Don&apos;t take our word for it. See what our users have to say. We
+            also appreciate your feedback. Feel free to drop a review on our
+            Discord or Twitter Handle.
           </p>
         </div>
       </div>
