@@ -6,14 +6,6 @@ import { motion as m } from "framer-motion";
 import { useEffect } from "react";
 
 const Header = () => {
-
-  useEffect(() => {
-    window.addEventListener('scroll', function(){
-      document.getElementById('header')?.classList.toggle('hidden')
-    })
-
-  }, [])
-
   return (
     <m.div className="bg-blue-500" id="header">
       <div className="py-2 hidden md:block justify-center text-center dark:text-white text-white">
