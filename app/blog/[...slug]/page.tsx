@@ -7,6 +7,7 @@ import Nav from "@/components/local/Nav";
 import { Tag } from "@/components/local/tag";
 import { formatDate } from "@/lib/utils";
 import FooterMain from "@/components/local/FooterMain";
+import type { ResolvingMetadata } from 'next';
 
 interface PostPageProps {
   params: {
@@ -17,13 +18,10 @@ interface PostPageProps {
 async function getPostFromParam(params: PostPageProps["params"]) {
   const slug = params?.slug?.join("/");
   const post = posts.find((post) => post.slugAsParams === slug);
-
   return post;
 }
 
-export async function generateMetadata({
-  params,
-}: PostPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
   const post = await getPostFromParam(params);
   if (!post) {
     return {};
@@ -31,6 +29,7 @@ export async function generateMetadata({
 
   const ogSearchParams = new URLSearchParams();
   ogSearchParams.set("title", post.title);
+
   return {
     title: post.title,
     description: post.description,
@@ -58,9 +57,7 @@ export async function generateMetadata({
   };
 }
 
-export async function generateStaticParams(): Promise<
-  PostPageProps["params"][]
-> {
+export async function generateStaticParams(): Promise<PostPageProps["params"][]> {
   return posts.map((post) => ({
     slug: post.slugAsParams.split("/"),
   }));
