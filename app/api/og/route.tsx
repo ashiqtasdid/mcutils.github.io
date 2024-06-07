@@ -4,10 +4,11 @@ import { ImageResponse } from "next/og";
 export const runtime = "edge";
 const interBold = fetch(
   new URL(
-    "../../../assets/fonts/ZedMonoNerdFontPropo-Extended.ttf",
+    "../../../assets/fonts/GeistMono-Bold.ttf",
     import.meta.url
   )
 ).then((res) => res.arrayBuffer());
+
 
 export async function GET(req: NextRequest) {
   try {

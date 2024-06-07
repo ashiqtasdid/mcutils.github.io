@@ -35,7 +35,9 @@ const FooterMain = () => {
             <div className="hover:cursor-pointer hover:underline">
               <Link href={"/EULA"}>EULA</Link>
             </div>
-            <div className="hover:cursor-pointer hover:underline"><Link href={'/roadmap'}>Roadmap</Link></div>
+            <div className="hover:cursor-pointer hover:underline">
+              <Link href={"/roadmap"}>Roadmap</Link>
+            </div>
           </div>
           <div className="space-y-2">
             <div className="text-xl py-3">Development</div>
@@ -111,7 +113,9 @@ const FooterMain = () => {
             <div className="hover:cursor-pointer hover:underline">
               <Link href={"/EULA"}>EULA</Link>
             </div>
-            <div className="hover:cursor-pointer hover:underline"><Link href={'/roadmap'}>Roadmap</Link></div>
+            <div className="hover:cursor-pointer hover:underline">
+              <Link href={"/roadmap"}>Roadmap</Link>
+            </div>
           </div>
           <div className="space-y-2">
             <div className="text-xl py-3">Development</div>
