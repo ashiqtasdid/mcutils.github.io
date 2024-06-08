@@ -9,6 +9,7 @@ import QueryPagination from "@/components/local/query-pagination";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaGithubSquare } from "react-icons/fa";
 import { GoAlertFill } from "react-icons/go";
+import { useRouter } from "next/router"; // Import useRouter
 
 const POST_PER_PAGE = 5;
 
@@ -31,7 +32,9 @@ export async function generateStaticParams() {
 }
 
 export default async function Blog({ params }: BlogPageProps) {
+  const router = useRouter(); // Use useRouter hook
   const currentPage = Number(params.page) || 1;
+  const searchParams = router.query; // Access query params through useRouter
   const sortedPosts = sortPost(posts.filter((post) => post.published));
   const totalPages = Math.ceil(sortedPosts.length / POST_PER_PAGE);
   const displayPosts = sortedPosts.slice(
