@@ -18,7 +18,6 @@ export async function GET(req: NextRequest) {
 
     const heading =
       title.length > 140 ? `${title.substring(0, 140)}...` : title;
-
     return new ImageResponse(
       (
         <div tw="flex relative flex-col p-12 w-full h-full items-start text-black bg-white">

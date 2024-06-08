@@ -1,21 +1,31 @@
 "use client";
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Badge } from "@/components/ui/badge";
-import { animate, delay, motion as m } from "framer-motion";
-import { Separator } from "@radix-ui/react-separator";
+import { motion as m } from "framer-motion";
 import Link from "next/link";
+import { Skeleton } from "../ui/skeleton";
 
 const HeroNext = () => {
   const [data, setData] = useState<{ users: number; servers: number } | null>(
     null
   );
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    axios.get("http://157.230.225.56:6005/stats").then((res) => {
-      setData(res.data);
-    });
+    const fetchData = async () => {
+      try {
+        const res = await axios.get("https://mcutils.sillydevelopment.co.uk/stats");
+        setData(res.data);
+      } catch (err) {
+        setError("Failed to fetch data");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
   }, []);
 
   const animationVariants = {
@@ -44,27 +54,27 @@ const HeroNext = () => {
           </div>
           <div className="space-y-7">
             <h1 className="font-black justify-center text-center items-center flex text-6xl">
-              Serving {data?.users.toLocaleString()} users across{" "}
-              {data?.servers.toLocaleString()} servers
+              Serving {loading ? "..." : data?.users.toLocaleString()} users
+              across {loading ? "..." : data?.servers.toLocaleString()} servers
             </h1>
             <div className="text-justify">
               <p>
-              A feature-rich bot for Minecraft tools & utilities. Easily get
-              real-time information about a Minecraft server, player skin, UUID,
-              and much more! We are proudly serving{" "}
-              {data?.users.toLocaleString()} users across{" "}
-              {data?.servers.toLocaleString()} servers. You can check{" "}
-              <span className="font-bold">real-time</span> Minecraft Java
-              Edition / Minecraft Bedrock Edition servers. Also, you can check
-              out a player&apos;s{" "}
-              <span className="font-bold">Minecraft profile</span> by their
-              username. Get detailed information about{" "}
-              <span className="font-bold">Minecraft items & mobs</span> to
-              expand your skills and knowledge about Minecraft.{" "}
-              <span className="">Invite</span>{" "}
-              <span className="font-bold underline">Minecraft Utilities</span>{" "}
-              to your Discord server using the button below and elevate your
-              Minecraft experience.
+                A feature-rich bot for Minecraft tools & utilities. Easily get
+                real-time information about a Minecraft server, player skin,
+                UUID, and much more! We are proudly serving{" "}
+                {data?.users.toLocaleString()} users across{" "}
+                {data?.servers.toLocaleString()} servers. You can check{" "}
+                <span className="font-bold">real-time</span> Minecraft Java
+                Edition / Minecraft Bedrock Edition servers. Also, you can check
+                out a player&apos;s{" "}
+                <span className="font-bold">Minecraft profile</span> by their
+                username. Get detailed information about{" "}
+                <span className="font-bold">Minecraft items & mobs</span> to
+                expand your skills and knowledge about Minecraft.{" "}
+                <span className="">Invite</span>{" "}
+                <span className="font-bold underline">Minecraft Utilities</span>{" "}
+                to your Discord server using the button below and elevate your
+                Minecraft experience.
               </p>
             </div>
           </div>
