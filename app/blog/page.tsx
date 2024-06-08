@@ -5,7 +5,7 @@ import Nav from "@/components/local/Nav";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tag } from "@/components/local/tag";
 import FooterMain from "@/components/local/FooterMain";
-import QueryPagination from "@/components/local/query-pagination"; // Import QueryPagination
+import QueryPagination from "@/components/local/query-pagination";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaGithubSquare } from "react-icons/fa";
 import { GoAlertFill } from "react-icons/go";
@@ -13,11 +13,25 @@ import { GoAlertFill } from "react-icons/go";
 const POST_PER_PAGE = 5;
 
 interface BlogPageProps {
-  searchParams: { page?: string };
+  params: {
+    page: string;
+  };
 }
 
-export default async function Blog({ searchParams }: BlogPageProps) {
-  const currentPage = Number(searchParams?.page) || 1;
+export async function generateStaticParams() {
+  const totalPosts = posts.filter((post) => post.published).length;
+  const totalPages = Math.ceil(totalPosts / POST_PER_PAGE);
+
+  // Generate static params for each page
+  const paths = Array.from({ length: totalPages }, (_, i) => ({
+    page: (i + 1).toString(),
+  }));
+
+  return paths;
+}
+
+export default async function Blog({ params }: BlogPageProps) {
+  const currentPage = Number(params.page) || 1;
   const sortedPosts = sortPost(posts.filter((post) => post.published));
   const totalPages = Math.ceil(sortedPosts.length / POST_PER_PAGE);
   const displayPosts = sortedPosts.slice(

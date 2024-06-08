@@ -23,7 +23,7 @@ const QueryPagination: React.FC<QueryPaginationProps> = ({
 }) => {
   const pathName = usePathname();
   const searchParams = useSearchParams();
-  
+
   const previousPage = useMemo(() => currentPage - 1, [currentPage]);
   const nextPage = useMemo(() => currentPage + 1, [currentPage]);
 
