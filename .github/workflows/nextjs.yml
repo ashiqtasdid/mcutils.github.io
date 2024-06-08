@@ -31,14 +31,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup pnpm
+      
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
+      
       - name: Setup pnpm
         uses: pnpm/action-setup@v4.0.0
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
@@ -47,14 +48,17 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
+
       - name: Install dependencies
         run: pnpm install
+      
       - name: Build with Next.js
         run: pnpm next build
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: .next
 
   # Deployment job
   deploy:
