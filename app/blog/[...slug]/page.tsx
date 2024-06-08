@@ -37,10 +37,12 @@ export async function generateMetadata({
   console.log(ogImageUrl);
 
   return {
-    metadataBase: new URL('https://mcutils.vercel.app'),
+    metadataBase: new URL("https://minecraftutilities.github.io"),
     title: post.title,
     description: post.description,
-    authors: [{ name: "Ashiq Tasdid", url: "https://mcutils.github.io" }],
+    authors: [
+      { name: "Ashiq Tasdid", url: "https://minecraftutilities.github.io" },
+    ],
     openGraph: {
       title: post.title,
       description: post.description,

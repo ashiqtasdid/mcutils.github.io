@@ -37,3 +37,6 @@ next-env.d.ts
 
 # VELITE
 .velite
+
+# npmrc
+.npmrc

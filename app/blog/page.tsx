@@ -5,10 +5,7 @@ import Nav from "@/components/local/Nav";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tag } from "@/components/local/tag";
 import FooterMain from "@/components/local/FooterMain";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { FaGithubSquare } from "react-icons/fa";
-import { GoAlertFill } from "react-icons/go";
-import dynamic from 'next/dynamic'; // Import dynamic from next/dynamic
+import dynamic from "next/dynamic"; // Import dynamic from next/dynamic
 
 const POST_PER_PAGE = 5;
 
@@ -32,7 +29,7 @@ export async function generateStaticParams() {
 
 // Wrap the component that uses client-side functionality in a dynamic import
 const DynamicQueryPagination = dynamic(
-  () => import('@/components/local/query-pagination'),
+  () => import("@/components/local/query-pagination"),
   { ssr: false }
 );
 
@@ -102,7 +99,7 @@ export default async function Blog({ params }: BlogPageProps) {
           </Card>
         </div>
       </div>
-      <hr className="my-4 mx-4 dark:hidden"/>
+      <hr className="my-4 mx-4 dark:hidden" />
       <FooterMain />
     </div>
   );
