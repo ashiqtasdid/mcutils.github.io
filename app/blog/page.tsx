@@ -5,11 +5,10 @@ import Nav from "@/components/local/Nav";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tag } from "@/components/local/tag";
 import FooterMain from "@/components/local/FooterMain";
-import QueryPagination from "@/components/local/query-pagination";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaGithubSquare } from "react-icons/fa";
 import { GoAlertFill } from "react-icons/go";
-import { useRouter } from "next/navigation";
+import dynamic from 'next/dynamic'; // Import dynamic from next/dynamic
 
 const POST_PER_PAGE = 5;
 
@@ -31,10 +30,14 @@ export async function generateStaticParams() {
   return paths;
 }
 
+// Wrap the component that uses client-side functionality in a dynamic import
+const DynamicQueryPagination = dynamic(
+  () => import('@/components/local/query-pagination'),
+  { ssr: false }
+);
+
 export default async function Blog({ params }: BlogPageProps) {
-  const router = useRouter(); // Use useRouter hook
   const currentPage = Number(params.page) || 1;
-  const searchParams = router.query; // Access query params through useRouter
   const sortedPosts = sortPost(posts.filter((post) => post.published));
   const totalPages = Math.ceil(sortedPosts.length / POST_PER_PAGE);
   const displayPosts = sortedPosts.slice(
@@ -79,7 +82,8 @@ export default async function Blog({ params }: BlogPageProps) {
           ) : (
             <div className="text-center text-gray-500">There are no posts</div>
           )}
-          <QueryPagination
+          {/* Use the dynamically imported QueryPagination */}
+          <DynamicQueryPagination
             totalPages={totalPages}
             currentPage={currentPage}
             className="flex justify-center mt-8"
