@@ -12,7 +12,7 @@ const HeroNextM = () => {
   );
 
   useEffect(() => {
-    axios.get("http://157.230.225.56:6005/stats").then((res) => {
+    axios.get("https://mcutils.sillydevelopment.co.uk/stats").then((res) => {
       setData(res.data);
     });
   }, []);
@@ -46,22 +46,22 @@ const HeroNextM = () => {
             </h1>
             <div className="text-justify">
               <p>
-              A feature-rich bot for Minecraft tools & utilities. Easily get
-              real-time information about a Minecraft server, player skin, UUID,
-              and much more! We are proudly serving{" "}
-              {data?.users.toLocaleString()} users across{" "}
-              {data?.servers.toLocaleString()} servers. You can check{" "}
-              <span className="font-bold">real-time</span> Minecraft Java
-              Edition / Minecraft Bedrock Edition servers. Also, you can check
-              out a player&apos;s{" "}
-              <span className="font-bold">Minecraft profile</span> by their
-              username. Get detailed information about{" "}
-              <span className="font-bold">Minecraft items & mobs</span> to
-              expand your skills and knowledge about Minecraft.{" "}
-              <span className="">Invite</span>{" "}
-              <span className="font-bold underline">Minecraft Utilities</span>{" "}
-              to your Discord server using the button below and elevate your
-              Minecraft experience.
+                A feature-rich bot for Minecraft tools & utilities. Easily get
+                real-time information about a Minecraft server, player skin,
+                UUID, and much more! We are proudly serving{" "}
+                {data?.users.toLocaleString()} users across{" "}
+                {data?.servers.toLocaleString()} servers. You can check{" "}
+                <span className="font-bold">real-time</span> Minecraft Java
+                Edition / Minecraft Bedrock Edition servers. Also, you can check
+                out a player&apos;s{" "}
+                <span className="font-bold">Minecraft profile</span> by their
+                username. Get detailed information about{" "}
+                <span className="font-bold">Minecraft items & mobs</span> to
+                expand your skills and knowledge about Minecraft.{" "}
+                <span className="">Invite</span>{" "}
+                <span className="font-bold underline">Minecraft Utilities</span>{" "}
+                to your Discord server using the button below and elevate your
+                Minecraft experience.
               </p>
             </div>
           </div>

@@ -124,12 +124,18 @@ const Nav = () => {
               <SheetContent side={"left"} className="">
                 <div className="mx-5 space-y-3">
                   <SheetTitle>Minecraft Utilities</SheetTitle>
-                  <m.div className="hover:text-gray-500"><Link href={'/'}>Home</Link></m.div>
+                  <m.div className="hover:text-gray-500">
+                    <Link href={"/"}>Home</Link>
+                  </m.div>
                   <m.div className="hover:text-gray-500">Documentation</m.div>
-                  <m.div className="hover:text-gray-500"><Link href={'/blog'}>Blog</Link></m.div>
+                  <m.div className="hover:text-gray-500">
+                    <Link href={"/blog"}>Blog</Link>
+                  </m.div>
                   <m.div className="hover:text-gray-500">Status</m.div>
                   <m.div className="hover:text-gray-500">Team</m.div>
-                  <m.div className="hover:text-gray-500"><Link href={'/invite'}>Invite</Link></m.div>
+                  <m.div className="hover:text-gray-500">
+                    <Link href={"/invite"}>Invite</Link>
+                  </m.div>
                   <ModeToggle />
                 </div>
               </SheetContent>

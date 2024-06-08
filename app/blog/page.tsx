@@ -1,48 +1,29 @@
 import { posts } from "#site/posts";
 import Post from "@/components/local/Post";
-import { QueryPagination } from "@/components/local/query-pagination";
 import { getAllTags, sortPost, sortTagsByCount } from "@/lib/utils";
-import { useMemo } from "react";
 import Nav from "@/components/local/Nav";
-import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tag } from "@/components/local/tag";
 import FooterMain from "@/components/local/FooterMain";
+import QueryPagination from "@/components/local/query-pagination"; // Import QueryPagination
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaGithubSquare } from "react-icons/fa";
 import { GoAlertFill } from "react-icons/go";
-// import { motion as m } from "framer-motion";
+
 const POST_PER_PAGE = 5;
 
 interface BlogPageProps {
-  searchParams: {
-    page?: string;
-  };
+  searchParams: { page?: string };
 }
 
 export default async function Blog({ searchParams }: BlogPageProps) {
-  const currentPage = useMemo(
-    () => Number(searchParams?.page) || 1,
-    [searchParams]
+  const currentPage = Number(searchParams?.page) || 1;
+  const sortedPosts = sortPost(posts.filter((post) => post.published));
+  const totalPages = Math.ceil(sortedPosts.length / POST_PER_PAGE);
+  const displayPosts = sortedPosts.slice(
+    POST_PER_PAGE * (currentPage - 1),
+    POST_PER_PAGE * currentPage
   );
-  const sortedPosts = useMemo(
-    () => sortPost(posts.filter((post) => post.published)),
-    []
-  );
-  const totalPages = useMemo(
-    () => Math.ceil(sortedPosts.length / POST_PER_PAGE),
-    [sortedPosts.length]
-  );
-
-  const displayPosts = useMemo(
-    () =>
-      sortedPosts.slice(
-        POST_PER_PAGE * (currentPage - 1),
-        POST_PER_PAGE * currentPage
-      ),
-    [currentPage, sortedPosts]
-  );
-
   const tags = getAllTags(posts);
   const sortedTags = sortTagsByCount(tags);
 
@@ -54,7 +35,7 @@ export default async function Blog({ searchParams }: BlogPageProps) {
           <div className="mx-auto">
             <div className="text-4xl font-black mt-3">Blog</div>
             <div className="text-zinc-700 dark:text-zinc-400">
-              Updates & Announcments about the discord bot
+              Updates & Announcements about the discord bot
             </div>
           </div>
           <hr className="my-4" />
@@ -83,6 +64,7 @@ export default async function Blog({ searchParams }: BlogPageProps) {
           )}
           <QueryPagination
             totalPages={totalPages}
+            currentPage={currentPage}
             className="flex justify-center mt-8"
           />
         </div>

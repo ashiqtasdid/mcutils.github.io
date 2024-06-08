@@ -12,17 +12,18 @@ import { useMemo, useCallback } from "react";
 
 interface QueryPaginationProps {
   totalPages: number;
+  currentPage: number;
   className?: string;
 }
 
-export function QueryPagination({
+const QueryPagination: React.FC<QueryPaginationProps> = ({
   totalPages,
+  currentPage,
   className,
-}: QueryPaginationProps) {
+}) => {
   const pathName = usePathname();
   const searchParams = useSearchParams();
   
-  const currentPage = useMemo(() => Number(searchParams.get("page")) || 1, [searchParams]);
   const previousPage = useMemo(() => currentPage - 1, [currentPage]);
   const nextPage = useMemo(() => currentPage + 1, [currentPage]);
 
@@ -63,4 +64,6 @@ export function QueryPagination({
       </PaginationContent>
     </Pagination>
   );
-}
+};
+
+export default QueryPagination;
