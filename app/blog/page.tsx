@@ -9,7 +9,7 @@ import QueryPagination from "@/components/local/query-pagination";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaGithubSquare } from "react-icons/fa";
 import { GoAlertFill } from "react-icons/go";
-import { useRouter } from "next/router"; // Import useRouter
+import { useRouter } from "next/navigation";
 
 const POST_PER_PAGE = 5;
 
