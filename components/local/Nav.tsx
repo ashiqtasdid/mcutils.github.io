@@ -78,7 +78,7 @@ const Nav = () => {
                     Status
                   </m.li>
                 </Link>
-                <Link href={"/"}>
+                <Link href={"/team"}>
                   <m.li
                     className={`cursor-pointer ${
                       path === "/team"
@@ -132,7 +132,7 @@ const Nav = () => {
                     <Link href={"/blog"}>Blog</Link>
                   </m.div>
                   <m.div className="hover:text-gray-500">Status</m.div>
-                  <m.div className="hover:text-gray-500">Team</m.div>
+                  <m.div className="hover:text-gray-500"><Link href={'/team'}>Team</Link></m.div>
                   <m.div className="hover:text-gray-500">
                     <Link href={"/invite"}>Invite</Link>
                   </m.div>
