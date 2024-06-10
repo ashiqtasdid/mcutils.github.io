@@ -1,11 +1,33 @@
 import FooterMain from "@/components/local/FooterMain";
 import Nav from "@/components/local/Nav";
 import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Service | Minecraft Utilities",
+  description:
+    "The terms of service for Minecraft Utilities Discord Bot. By using the bot, you agree to these terms. Learn more.",
+  keywords: [
+    "Minecraft Utilities",
+    "Terms of Service",
+    "Minecraft",
+    "Discord",
+    "Bot",
+    "Company",
+    "2024",
+    "Hypixel",
+    "Discord",
+    "Server",
+    "Support",
+    "Developers",
+    "Partners",
+  ],
+};
 
 const terms = () => {
   return (
     <div>
-        <Nav/>
+      <Nav />
       <div className="tos-container prose mx-auto py-32">
         <h2>Terms of Service (TOS) for Minecraft Utilities Discord Bot</h2>
 
@@ -103,7 +125,7 @@ const terms = () => {
           these TOS.**
         </p>
       </div>
-      <FooterMain/>
+      <FooterMain />
     </div>
   );
 };

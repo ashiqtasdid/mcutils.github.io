@@ -2,11 +2,32 @@ import FooterMain from "@/components/local/FooterMain";
 import Nav from "@/components/local/Nav";
 import Link from "next/link";
 import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "EULA | Minecraft Utilities",
+  description:
+    "End-User License Agreement for Minecraft Utilities Discord Bot. Learn about the terms and conditions of using the bot.",
+  keywords: [
+    "Minecraft Utilities",
+    "EULA",
+    "Minecraft",
+    "Discord",
+    "Bot",
+    "Terms",
+    "Conditions",
+    "2024",
+    "Hypixel",
+    "Discord",
+    "Server",
+    "Support",
+  ],
+};
 
 const EULA = () => {
   return (
     <div>
-        <Nav/>
+      <Nav />
       <div className=" text-black dark:text-white prose mx-auto sm:mx-2 py-32 ">
         <h2 className="text-black dark:text-white">
           End-User License Agreement (EULA) for Minecraft Utilities Discord Bot
@@ -33,12 +54,21 @@ const EULA = () => {
 
         <p>
           The Minecraft Utilities Discord Bot is an open-source project. The
-          source code is available for your review and modification <Link href={'https://github.com/ashiqtasdid/minecraft-utilities'} target="_blank">Github Repo</Link>. You are free to modify the source code for your own
-          personal use, but you may not distribute modified versions of the
-          Software without our express written permission.
+          source code is available for your review and modification{" "}
+          <Link
+            href={"https://github.com/ashiqtasdid/minecraft-utilities"}
+            target="_blank"
+          >
+            Github Repo
+          </Link>
+          . You are free to modify the source code for your own personal use,
+          but you may not distribute modified versions of the Software without
+          our express written permission.
         </p>
 
-        <h3 className="text-black dark:text-white">3. Disclaimer of Warranty</h3>
+        <h3 className="text-black dark:text-white">
+          3. Disclaimer of Warranty
+        </h3>
 
         <p>
           The Software is provided &quot;as is&quot; and without warranty of any
@@ -48,7 +78,9 @@ const EULA = () => {
           associated with the use of the Software.
         </p>
 
-        <h3 className="text-black dark:text-white">4. Limitation of Liability</h3>
+        <h3 className="text-black dark:text-white">
+          4. Limitation of Liability
+        </h3>
 
         <p>
           We shall not be liable for any damages arising out of your use of the
@@ -99,7 +131,8 @@ const EULA = () => {
         <h3 className="text-black dark:text-white">10. Contact Us</h3>
 
         <p>
-          If you have any questions about this EULA, please contact us at <Link href={'/faq'}>here</Link>
+          If you have any questions about this EULA, please contact us at{" "}
+          <Link href={"/faq"}>here</Link>
         </p>
 
         <p className="text-center font-bold mt-4">
@@ -110,7 +143,7 @@ const EULA = () => {
         </p>
       </div>
       <hr />
-      <FooterMain/>
+      <FooterMain />
     </div>
   );
 };

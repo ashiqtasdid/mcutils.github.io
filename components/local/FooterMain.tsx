@@ -4,13 +4,19 @@ import { FaGithubSquare } from "react-icons/fa";
 import { GoAlertFill } from "react-icons/go";
 import Link from "next/link";
 import { Target } from "lucide-react";
+import Image from "next/image";
+import logo from "../../assets/logo.png";
 
 const FooterMain = () => {
   return (
     <div className="dark:bg-zinc-800 pt-6">
       <div className=" hidden md:flex mx-10 justify-between">
         <div className="space-y-3 my-auto">
-          <div>Logo</div>
+          <Link href={"/"}>
+            <div>
+              <Image src={logo} height={50} width={50} alt="logo" />
+            </div>
+          </Link>
           <span className="text-sm">Copyright 2024, Minecraft Utilities. </span>
           <div className="text-sm">
             <Link href={"/EULA"}>
@@ -57,7 +63,14 @@ const FooterMain = () => {
                 Github
               </Link>
             </div>
-            <div className="hover:cursor-pointer hover:underline">Status</div>
+            <div className="hover:cursor-pointer hover:underline">
+              <Link
+                href={"https://minecraftutilities.statuspage.io"}
+                target="_blank"
+              >
+                Status
+              </Link>
+            </div>
             <div className="hover:cursor-pointer hover:underline">
               Contributors
             </div>
@@ -66,7 +79,9 @@ const FooterMain = () => {
             <div className="text-xl py-3">Company</div>
             <div className="hover:cursor-pointer hover:underline">About</div>
             <div className="hover:cursor-pointer hover:underline">Contact</div>
-            <div className="hover:cursor-pointer hover:underline">Team</div>
+            <div className="hover:cursor-pointer hover:underline">
+              <Link href={"/team"}>Team</Link>
+            </div>
             <div className="hover:cursor-pointer hover:underline">
               <Link href={"/terms"}>Terms & Conditions</Link>
             </div>
@@ -92,7 +107,11 @@ const FooterMain = () => {
       </div>
       <div className="md:hidden lg:hidden mx-3">
         <div className="py-10 my-auto">
-          <div>Logo</div>
+          <Link href={"/"}>
+            <div>
+              <Image src={logo} height={30} width={30} alt="logo" />
+            </div>
+          </Link>
           <span className="text-sm">Copyright 2024, Minecraft Utilities. </span>
           <div className="text-sm">
             <Link href={"/EULA"}>
@@ -139,7 +158,14 @@ const FooterMain = () => {
                 Github
               </Link>
             </div>
-            <div className="hover:cursor-pointer hover:underline">Status</div>
+            <div className="hover:cursor-pointer hover:underline">
+              <Link
+                href={"https://minecraftutilities.statuspage.io"}
+                target="_blank"
+              >
+                Status
+              </Link>
+            </div>
             <div className="hover:cursor-pointer hover:underline">
               Contributors
             </div>
@@ -148,7 +174,9 @@ const FooterMain = () => {
             <div className="text-2xl py-3 font-bold">Company</div>
             <div className="hover:cursor-pointer hover:underline">About</div>
             <div className="hover:cursor-pointer hover:underline">Contact</div>
-            <div className="hover:cursor-pointer hover:underline">Team</div>
+            <div className="hover:cursor-pointer hover:underline">
+              <Link href={"/team"}>Team</Link>
+            </div>
             <div className="hover:cursor-pointer hover:underline">
               <Link href={"/terms"}>Terms & Conditions</Link>
             </div>

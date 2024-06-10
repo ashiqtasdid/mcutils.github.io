@@ -8,6 +8,14 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "FAQ | Minecraft Utilities",
+  description:
+    "Frequently asked questions about Minecraft Utilities. Learn about the bot, the company, and more.",
+  keywords: ["Minecraft Utilities", "FAQ", "Minecraft", "Discord", "Bot", "Company", "2024", "Hypixel", "Discord", "Server", "Support"],
+}
 
 const faq = () => {
   return (

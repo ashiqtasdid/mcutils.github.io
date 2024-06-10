@@ -14,8 +14,9 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { HiMiniBars3BottomRight } from "react-icons/hi2";
-import ReactCountryFlag from "react-country-flag";
 import Header from "./Header";
+import logo from "../../assets/logo.png";
+import Image from "next/image";
 
 const Nav = () => {
   const path = usePathname();
@@ -27,7 +28,19 @@ const Nav = () => {
       <div className="py-2.5 hidden md:block">
         <div className="flex justify-between mx-10">
           <div className="flex pt-1.5 space-x-5">
-            <div>LOGO</div>
+            <Link href={"/"}>
+              <m.div
+                whileHover={{ scale: 1.2, rotate: 360 }}
+                transition={{ duration: 1 }}
+              >
+                <Image
+                  src={logo}
+                  alt="Minecraft Utilities"
+                  width={25}
+                  height={25}
+                />
+              </m.div>
+            </Link>
             <div>
               <ul className="flex font-medium space-x-5">
                 <Link href={"/"}>
@@ -68,7 +81,10 @@ const Nav = () => {
                     Blog
                   </m.li>
                 </Link>
-                <Link href={"/"}>
+                <Link
+                  href={"https://minecraftutilities.statuspage.io"}
+                  target="_blank"
+                >
                   <m.li
                     className={`cursor-pointer ${
                       path === "/status"
@@ -117,7 +133,19 @@ const Nav = () => {
       {/* Smaller Screen */}
       <div className="py-2.5 md:hidden">
         <div className="flex pt-1.5 pb-1 mx-5 justify-between">
-          <div>Logo</div>
+          <Link href={"/"}>
+            <m.div
+              whileHover={{ scale: 1.2, rotate: 360 }}
+              transition={{ duration: 1 }}
+            >
+              <Image
+                src={logo}
+                alt="Minecraft Utilities"
+                width={25}
+                height={25}
+              />
+            </m.div>
+          </Link>
           <div>
             <Sheet>
               <SheetTrigger>
@@ -141,7 +169,14 @@ const Nav = () => {
                   <m.div className="hover:text-gray-500">
                     <Link href={"/blog"}>Blog</Link>
                   </m.div>
-                  <m.div className="hover:text-gray-500">Status</m.div>
+                  <m.div className="hover:text-gray-500">
+                    <Link
+                      href={"https://minecraftutilities.statuspage.io"}
+                      target="_blank"
+                    >
+                      Status
+                    </Link>
+                  </m.div>
                   <m.div className="hover:text-gray-500">
                     <Link href={"/team"}>Team</Link>
                   </m.div>
