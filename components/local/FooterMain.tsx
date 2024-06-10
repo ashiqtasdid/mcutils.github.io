@@ -3,6 +3,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaGithubSquare } from "react-icons/fa";
 import { GoAlertFill } from "react-icons/go";
 import Link from "next/link";
+import { Target } from "lucide-react";
 
 const FooterMain = () => {
   return (
@@ -103,7 +104,7 @@ const FooterMain = () => {
         </div>
         <div className="space-y-5">
           <div className="space-y-2">
-            <div className="text-xl py-3">Product</div>
+            <div className="text-2xl py-3 font-bold">Product</div>
             <div className="hover:cursor-pointer hover:underline">
               <Link href={"/invite"}>Invite</Link>
             </div>
@@ -118,7 +119,7 @@ const FooterMain = () => {
             </div>
           </div>
           <div className="space-y-2">
-            <div className="text-xl py-3">Development</div>
+            <div className="text-2xl py-3 font-bold">Development</div>
             <div className="hover:cursor-pointer hover:underline">
               Documentation
             </div>
@@ -136,7 +137,7 @@ const FooterMain = () => {
             </div>
           </div>
           <div className="space-y-2">
-            <div className="text-xl py-3">Company</div>
+            <div className="text-2xl py-3 font-bold">Company</div>
             <div className="hover:cursor-pointer hover:underline">About</div>
             <div className="hover:cursor-pointer hover:underline">Contact</div>
             <div className="hover:cursor-pointer hover:underline">Team</div>
@@ -145,7 +146,7 @@ const FooterMain = () => {
             </div>
           </div>
           <div className="space-y-2">
-            <div className="text-xl py-3">Community</div>
+            <div className="text-2xl py-3 font-bold">Community</div>
             <div className="hover:cursor-pointer hover:underline">
               <Link href={"/blog"}>Blog</Link>
             </div>
@@ -163,7 +164,15 @@ const FooterMain = () => {
       </div>
       <div className="pt-6">
         <div className="dark:bg-blue-600 flex justify-between py-1 bg-zinc-300">
-          <div className="mx-10 hover:underline">Sitemap</div>
+          <div className="flex mx-5 space-x-2">
+            <div>
+              Powered By:{" "}
+              <Link href={"https://sillydev.co.uk"} target="_blank">
+                Sillydev
+              </Link>
+            </div>
+            <div className="mx-10 underline hover:underline">Sitemap</div>
+          </div>
           <div className="mx-10 flex space-x-2 pt-1">
             <span className="hover:cursor-pointer">
               <Link href={"https://x.com/mc_utilities"}>
