@@ -43,7 +43,11 @@ const FooterMain = () => {
           <div className="space-y-2">
             <div className="text-xl py-3">Development</div>
             <div className="hover:cursor-pointer hover:underline">
-              Documentation
+              <Link
+                href={"https://minecraftutilities.github.io/documentation/"}
+              >
+                Documentation
+              </Link>
             </div>
             <div className="hover:cursor-pointer hover:underline">
               <Link
@@ -121,7 +125,11 @@ const FooterMain = () => {
           <div className="space-y-2">
             <div className="text-2xl py-3 font-bold">Development</div>
             <div className="hover:cursor-pointer hover:underline">
-              Documentation
+              <Link
+                href={"https://minecraftutilities.github.io/documentation/"}
+              >
+                Documentation
+              </Link>
             </div>
             <div className="hover:cursor-pointer hover:underline">
               <Link
