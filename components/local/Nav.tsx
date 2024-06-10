@@ -42,7 +42,9 @@ const Nav = () => {
                     Home
                   </m.li>
                 </Link>
-                <Link href={"/documentation"}>
+                <Link
+                  href={"https://minecraftutilities.github.io/documentation/"}
+                >
                   <m.li
                     className={`cursor-pointer ${
                       path === "/documentation"
@@ -127,12 +129,22 @@ const Nav = () => {
                   <m.div className="hover:text-gray-500">
                     <Link href={"/"}>Home</Link>
                   </m.div>
-                  <m.div className="hover:text-gray-500">Documentation</m.div>
+                  <m.div className="hover:text-gray-500">
+                    <Link
+                      href={
+                        "https://minecraftutilities.github.io/documentation/"
+                      }
+                    >
+                      Documentation
+                    </Link>
+                  </m.div>
                   <m.div className="hover:text-gray-500">
                     <Link href={"/blog"}>Blog</Link>
                   </m.div>
                   <m.div className="hover:text-gray-500">Status</m.div>
-                  <m.div className="hover:text-gray-500"><Link href={'/team'}>Team</Link></m.div>
+                  <m.div className="hover:text-gray-500">
+                    <Link href={"/team"}>Team</Link>
+                  </m.div>
                   <m.div className="hover:text-gray-500">
                     <Link href={"/invite"}>Invite</Link>
                   </m.div>

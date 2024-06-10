@@ -1,12 +1,18 @@
-import Nav from '@/components/local/Nav'
-import React from 'react'
+"use client";
+import React, { useEffect } from "react";
 
 const Documentation = () => {
-  return (
-    <div>
-        <Nav/>
-    </div>
-  )
-}
+  useEffect(() => {
+    const redirectTimeout = setTimeout(() => {
+      window.location.href =
+        "https://minecraftutilities.github.io/documentation/";
+    });
+    return () => {
+      clearTimeout(redirectTimeout);
+    };
+  });
 
-export default Documentation
+  return <div></div>;
+};
+
+export default Documentation;
