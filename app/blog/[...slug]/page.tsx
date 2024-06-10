@@ -7,7 +7,6 @@ import Nav from "@/components/local/Nav";
 import { Tag } from "@/components/local/tag";
 import { formatDate } from "@/lib/utils";
 import FooterMain from "@/components/local/FooterMain";
-import type { ResolvingMetadata } from "next";
 
 interface PostPageProps {
   params: {
@@ -32,8 +31,17 @@ export async function generateMetadata({
   const ogSearchParams = new URLSearchParams();
   ogSearchParams.set("title", post.title);
 
-  const ogImageUrl = `/api/og?${ogSearchParams.toString()}`;
 
+  function formattedDesc(desc: string){
+    const formatted = desc.replace(/ /g, "+")
+    const dotted = formatted + "..."
+    return dotted
+  }
+
+  const desc = post.description ? formattedDesc(post.description) : " " 
+
+
+  const ogImageUrl = `https://ashiqtasdid.vercel.app/api/og?${ogSearchParams.toString()}&heading=Minecraft+Utilities&url=https://minecraftutilitites.github.io&footer=Copyright%C2%A92024,+Minecraft+%20Utilities&desc=${desc}`;
   console.log(ogImageUrl);
 
   return {
