@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Badge } from "@/components/ui/badge";
 import { motion as m } from "framer-motion";
+import Link from "next/link";
 
 const HeroNextM = () => {
   const [data, setData] = useState<{ users: number; servers: number } | null>(
@@ -67,12 +68,16 @@ const HeroNextM = () => {
           </div>
           <div className="justify-center items-center flex pt-5">
             <div className="flex justify-between space-x-3">
+              <Link href={'/invite'}>
               <button className="rounded-sm border-2 border-black bg-white px-3 py-1.5 font-normal text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-xl active:shadow-none">
                 Invite
               </button>
+              </Link>
+              <Link href={'/documentation'}>
               <button className="rounded-sm border-2 border-zinc-800 bg-zinc-800 px-3 py-1.5 font-normal text-white transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-xl active:shadow-none">
                 Documentation
               </button>
+              </Link>
             </div>
           </div>
         </m.div>

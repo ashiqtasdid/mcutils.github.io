@@ -85,9 +85,11 @@ const HeroNext = () => {
                   Invite
                 </button>
               </Link>
+              <Link href={"/documentation"}>
               <button className="rounded-sm border-2 border-zinc-800 bg-zinc-800 px-3 py-1.5 font-normal text-white transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-xl active:shadow-none">
                 Documentation
               </button>
+              </Link>
             </div>
           </div>
         </m.div>
