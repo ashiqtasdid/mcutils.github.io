@@ -10,6 +10,12 @@ export default {
         hostname: "i.postimg.cc",
       },
     ],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.discordapp.com",
+      },
+    ],
   },
   webpack: (config) => {
     config.plugins.push(new VeliteWebpackPlugin());

@@ -27,12 +27,22 @@ export const metadata: Metadata = {
 };
 
 const team = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Website",
+    name: "Team - Minecraft Utilities",
+    url: "https://minecraftutilities.github.io/team",
+  };
   return (
     <div>
       <Nav />
       <TeamCmp />
       <hr className="my-4 dark:hidden" />
       <FooterMain />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </div>
   );
 };

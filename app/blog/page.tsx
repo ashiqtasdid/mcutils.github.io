@@ -44,6 +44,13 @@ export default async function Blog({ params }: BlogPageProps) {
   const tags = getAllTags(posts);
   const sortedTags = sortTagsByCount(tags);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Website",
+    name: "Blog - Minecraft Utilities",
+    url: "https://minecraftutilities.github.io/blog",
+  };
+
   return (
     <div>
       <Nav />
@@ -101,6 +108,10 @@ export default async function Blog({ params }: BlogPageProps) {
       </div>
       <hr className="my-4 mx-4 dark:hidden" />
       <FooterMain />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </div>
   );
 }

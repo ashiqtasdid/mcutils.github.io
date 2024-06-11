@@ -21,6 +21,12 @@ export const metadata: Metadata = {
 };
 
 const roadmap = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Website",
+    name: "Roadmap - Minecraft Utilities",
+    url: "https://minecraftutilities.github.io/roadmap",
+  };
   return (
     <div>
       <Nav />
@@ -50,6 +56,10 @@ const roadmap = () => {
 
       <hr className="my-4 dark:hidden" />
       <FooterMain />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </div>
   );
 };

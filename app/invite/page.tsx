@@ -24,9 +24,19 @@ export const metadata: Metadata = {
 };
 
 const page = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Website",
+    name: "EULA - Minecraft Utilities",
+    url: "https://minecraftutilities.github.io/EULA",
+  };
   return (
     <div>
       <Invite />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </div>
   );
 };

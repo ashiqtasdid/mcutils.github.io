@@ -25,10 +25,17 @@ export const metadata: Metadata = {
 };
 
 const terms = () => {
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Website",
+    name: "Terms & Conditions - Minecraft Utilities",
+    url: "https://minecraftutilities.github.io/terms",
+  };
   return (
     <div>
       <Nav />
-      <div className="tos-container prose mx-auto py-32">
+      <div className="tos-container prose dark:prose-a:text-white dark:prose-strong:text-white dark:prose-headings:text-white mx-auto py-32">
         <h2>Terms of Service (TOS) for Minecraft Utilities Discord Bot</h2>
 
         <p>
@@ -126,6 +133,10 @@ const terms = () => {
         </p>
       </div>
       <FooterMain />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </div>
   );
 };

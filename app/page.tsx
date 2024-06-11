@@ -1,9 +1,7 @@
 "use client";
 import Hero from "@/components/local/Hero";
 import Nav from "@/components/local/Nav";
-import Image from "next/image";
 import HeroNext from "@/components/local/HeroNext";
-import { motion as m } from "framer-motion";
 import { Separator } from "@/components/ui/separator";
 import HeroMid from "@/components/local/HeroMid";
 import HeroCentral from "@/components/local/HeroCentral";
@@ -25,53 +23,53 @@ export default function Home() {
     <main>
       <Nav />
       <div className="hidden md:block">
-      <HeroNext />
+        <HeroNext />
       </div>
       <div className="block pb-10 md:hidden lg:hidden">
-      <HeroNextM />
+        <HeroNextM />
       </div>
       <Separator />
       <div className="hidden md:block">
-      <Hero />
+        <Hero />
       </div>
       <div className="block pb-10 md:hidden lg:hidden">
         <HeroM />
       </div>
       <Separator />
       <div className="hidden md:block">
-      <HeroMid />
+        <HeroMid />
       </div>
       <div className="block pb-10 md:hidden lg:hidden">
         <HeroMidM />
       </div>
       <Separator />
       <div className="hidden md:block">
-      <HeroCentral />
+        <HeroCentral />
       </div>
       <div className="block pb-10 md:hidden lg:hidden">
         <HeroCentralM />
       </div>
       <div className="hidden md:block">
-      <HeroRes />
+        <HeroRes />
       </div>
       <div className="block pb-10 md:hidden lg:hidden">
-      <HeroResM />
+        <HeroResM />
       </div>
       <div className="hidden md:block">
-      <HeroBlockCMD />
+        <HeroBlockCMD />
       </div>
       <div className="block pb-10 md:hidden lg:hidden">
-        <HeroBlockCMDM />
-      /</div>
+        <HeroBlockCMDM />/
+      </div>
 
       <HeroBlockRes />
       <div className="hidden md:block">
-      <Reviews />
+        <Reviews />
       </div>
       <div className="block pb-10 md:hidden lg:hidden">
         <ReviewM />
       </div>
-      <hr className="my-4 mx-4 dark:hidden"/>
+      <hr className="my-4 mx-4 dark:hidden" />
       <FooterMain />
     </main>
   );

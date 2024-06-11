@@ -14,10 +14,93 @@ export const metadata: Metadata = {
   title: "FAQ | Minecraft Utilities",
   description:
     "Frequently asked questions about Minecraft Utilities. Learn about the bot, the company, and more.",
-  keywords: ["Minecraft Utilities", "FAQ", "Minecraft", "Discord", "Bot", "Company", "2024", "Hypixel", "Discord", "Server", "Support"],
-}
+  keywords: [
+    "Minecraft Utilities",
+    "FAQ",
+    "Minecraft",
+    "Discord",
+    "Bot",
+    "Company",
+    "2024",
+    "Hypixel",
+    "Discord",
+    "Server",
+    "Support",
+  ],
+};
 
 const faq = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How can I invite this bot?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "You can invite this bot by clicking on the invite button on the Navigation Bar.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How often the bot gets updated?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Every few weeks, we push updates to the bot to make it better and more efficient. At times, we also push hotfixes to resolve any issues.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What if I encounter an issue with the bot?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "You can report the issue by using the help command or by joining our support server.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the Discord Server link?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "You can join the Discord server by clicking this",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What data do you collect from the users?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We collect the time the bot takes to respond to a command and the command itself.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How can I contribute",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "You can contribute by going to our github repo and create a pull request",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How do you make money?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We do not make money from this bot. We do not have any ads or any other monetization methods. But we are planning to add ads on our website in the future.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Are You Hiring?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We are not hiring at the moment. If we do in the future, we will post it on our website.",
+        },
+      },
+    ],
+  };
+
   return (
     <div>
       <Nav />
@@ -138,6 +221,10 @@ const faq = () => {
       </div>
       <hr className="my-4 dark:hidden" />
       <FooterMain />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </div>
   );
 };

@@ -24,14 +24,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     {
-      url: `https://minecraftutilitie.github.io/`,
+      url: `https://minecraftutilities.github.io/`,
       lastModified: new Date(),
       priority: 1,
-    },
-    {
-      url: `https://minecraftutilitie.github.io/blog`,
-      lastModified: new Date(),
-      priority: 0.9,
     },
     {
       url: `https://minecraftutilities.github.io/documentation/`,
@@ -39,27 +34,42 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
-      url: `https://minecraftutilitie.github.io/invite`,
+      url: `https://minecraftutilities.github.io/blog`,
       lastModified: new Date(),
       priority: 0.9,
     },
     {
-      url: `https://minecraftutilitie.github.io/faq`,
+      url: `https://minecraftutilities.github.io/team`,
+      lastModified: new Date(),
+      priority: 0.9,
+    },
+    {
+      url: `https://minecraftutilities.github.io/team/profile/ashiqtasdid`,
+      lastModified: new Date(),
+      priority: 0.9,
+    },
+    {
+      url: `https://minecraftutilities.github.io/invite`,
+      lastModified: new Date(),
+      priority: 0.9,
+    },
+    {
+      url: `https://minecraftutilities.github.io/faq`,
       lastModified: new Date(),
       priority: 0.3,
     },
     {
-      url: `https://minecraftutilitie.github.io/roadmap`,
+      url: `https://minecraftutilities.github.io/roadmap`,
       lastModified: new Date(),
       priority: 0.8,
     },
     {
-      url: `https://minecraftutilitie.github.io/EULA`,
+      url: `https://minecraftutilities.github.io/EULA`,
       lastModified: new Date(),
       priority: 0.6,
     },
     {
-      url: `https://minecraftutilitie.github.io/terms`,
+      url: `https://minecraftutilities.github.io/terms`,
       lastModified: new Date(),
       priority: 0.6,
     },
