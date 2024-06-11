@@ -9,8 +9,6 @@ export default {
         protocol: "https",
         hostname: "i.postimg.cc",
       },
-    ],
-    remotePatterns: [
       {
         protocol: "https",
         hostname: "cdn.discordapp.com",

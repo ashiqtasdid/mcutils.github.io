@@ -203,11 +203,19 @@ const FooterMain = () => {
           <div className="flex mx-5 space-x-2">
             <div>
               Powered By:{" "}
-              <Link href={"https://sillydev.co.uk"} target="_blank">
+              <Link
+                href={"https://sillydev.co.uk"}
+                className="underline hover:underline"
+                target="_blank"
+              >
                 Sillydev
               </Link>
             </div>
-            <div className="mx-10 underline hover:underline">Sitemap</div>
+            <Link href={"/sitemap.xml"}>
+              <div className="mx-10 underline cursor-pointer hover:underline">
+                Sitemap
+              </div>
+            </Link>
           </div>
           <div className="mx-10 flex space-x-2 pt-1">
             <span className="hover:cursor-pointer">
