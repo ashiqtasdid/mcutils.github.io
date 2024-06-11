@@ -4,7 +4,6 @@ import axios from "axios";
 import { Badge } from "@/components/ui/badge";
 import { motion as m } from "framer-motion";
 import Link from "next/link";
-import { Skeleton } from "../ui/skeleton";
 
 const HeroNext = () => {
   const [data, setData] = useState<{ users: number; servers: number } | null>(
@@ -16,7 +15,9 @@ const HeroNext = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://mcutils.sillydevelopment.co.uk/stats");
+        const res = await axios.get(
+          "https://mcutils.sillydevelopment.co.uk/stats"
+        );
         setData(res.data);
       } catch (err) {
         setError("Failed to fetch data");
@@ -50,7 +51,9 @@ const HeroNext = () => {
           className="w-[65%] pt-10"
         >
           <div className="flex justify-center py-2 items-center">
-            <Badge className="text-white dark:text-black">Minecraft Utilities</Badge>
+            <Badge className="text-white dark:text-black">
+              Minecraft Utilities
+            </Badge>
           </div>
           <div className="space-y-7">
             <h1 className="font-black justify-center text-center items-center flex text-6xl">
@@ -86,9 +89,9 @@ const HeroNext = () => {
                 </button>
               </Link>
               <Link href={"/documentation"}>
-              <button className="rounded-sm border-2 border-zinc-800 bg-zinc-800 px-3 py-1.5 font-normal text-white transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-xl active:shadow-none">
-                Documentation
-              </button>
+                <button className="rounded-sm border-2 border-zinc-800 bg-zinc-800 px-3 py-1.5 font-normal text-white transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-xl active:shadow-none">
+                  Documentation
+                </button>
               </Link>
             </div>
           </div>
