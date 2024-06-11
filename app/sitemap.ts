@@ -18,7 +18,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const sortedTags = sortTagsByCount(tags);
 
   const tagsEntries: MetadataRoute.Sitemap = sortedTags.map((tag) => ({
-    url: `https://minecraftutilities.github.io/tags/${replaceTagSpace(tag)}`,
+    url: `https://minecraftutilities.github.io/tags/${replaceTagSpace(tag).toLocaleLowerCase()}`,
     priority: 0.4,
   }));
 
