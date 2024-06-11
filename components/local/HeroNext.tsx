@@ -50,7 +50,7 @@ const HeroNext = () => {
           className="w-[65%] pt-10"
         >
           <div className="flex justify-center py-2 items-center">
-            <Badge>Minecraft Utilities</Badge>
+            <Badge className="text-white dark:text-black">Minecraft Utilities</Badge>
           </div>
           <div className="space-y-7">
             <h1 className="font-black justify-center text-center items-center flex text-6xl">

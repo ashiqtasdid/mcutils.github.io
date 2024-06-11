@@ -31,16 +31,13 @@ export async function generateMetadata({
   const ogSearchParams = new URLSearchParams();
   ogSearchParams.set("title", post.title);
 
-
-  function formattedDesc(desc: string){
-    const formatted = desc.replace(/ /g, "+")
-    const dotted = formatted + "..."
-    return dotted
+  function formattedDesc(desc: string) {
+    const formatted = desc.replace(/ /g, "+");
+    const dotted = formatted + "...";
+    return dotted;
   }
 
-  const desc = post.description ? formattedDesc(post.description) : " " 
-
-
+  const desc = post.description ? formattedDesc(post.description) : " ";
   const ogImageUrl = `https://ashiqtasdid.vercel.app/api/og?${ogSearchParams.toString()}&heading=Minecraft+Utilities&url=https://minecraftutilitites.github.io&footer=Copyright%C2%A92024,+Minecraft+%20Utilities&desc=${desc}`;
   console.log(ogImageUrl);
 
@@ -48,6 +45,7 @@ export async function generateMetadata({
     metadataBase: new URL("https://minecraftutilities.github.io"),
     title: post.title,
     description: post.description,
+    keywords: post.keywords,
     authors: [
       { name: "Ashiq Tasdid", url: "https://minecraftutilities.github.io" },
     ],
@@ -99,7 +97,7 @@ export default async function PostPage({ params }: PostPageProps) {
             <Tag tag={tag} key={tag} />
           ))}
         </div>
-        <h2 className="-my-4 dark:text-white">
+        <h2 className="-my-4 dark:text-white text-black">
           {post.description ? <p>{post.description}</p> : null}
         </h2>
         {/* author */}
@@ -108,7 +106,7 @@ export default async function PostPage({ params }: PostPageProps) {
           {formatDate(post.date)}
         </p>
         <hr className="my-4" />
-        <div className="dark:text-white">
+        <div className="dark:text-white dark:prose-headings:text-white dark:prose-strong:text-white dark:prose-a:text-white">
           <MDXContent code={post.body} />
         </div>
       </article>
