@@ -83,6 +83,24 @@ export async function generateStaticParams(): Promise<
 export default async function PostPage({ params }: PostPageProps) {
   const post = await getPostFromParam(params);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post?.title,
+    image: " ",
+    description: post?.description,
+    datePublished: post?.date,
+    dateModified: post?.date,
+    author: {
+      "@type": "Person",
+      name: post?.author,
+      url: "https://minecraftutilities.github.io/team",
+    },
+    publisher: {
+      "@type": "Organization",
+    },
+  };
+
   if (!post || !post.published) {
     notFound();
   }
@@ -112,6 +130,10 @@ export default async function PostPage({ params }: PostPageProps) {
       </article>
       <hr className="my-4 mx-4 dark:hidden" />
       <FooterMain />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </div>
   );
 }
