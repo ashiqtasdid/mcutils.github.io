@@ -43,11 +43,11 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL("https://minecraftutilities.github.io"),
-    title: post.title,
+    title: post.title + " | Minecraft Utilities",
     description: post.description,
     keywords: post.keywords,
     authors: [
-      { name: "Ashiq Tasdid", url: "https://minecraftutilities.github.io" },
+      { name: "Ashiq Tasdid", url: "https://minecraftutilities.github.io/team/profile/ashiqtasdid" },
     ],
     openGraph: {
       title: post.title,
