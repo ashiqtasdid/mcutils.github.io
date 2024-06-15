@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tag } from "@/components/local/tag";
 import FooterMain from "@/components/local/FooterMain";
 import dynamic from "next/dynamic"; // Import dynamic from next/dynamic
+import { Metadata } from "next";
 
 const POST_PER_PAGE = 5;
 
@@ -14,6 +15,27 @@ interface BlogPageProps {
     page: string;
   };
 }
+
+export const metadata: Metadata = {
+  title: "Blog | Minecraft Utilities",
+  description:
+    "Latest updates, announcements & tutorials about the Minecraft Utilities Discord Bot. Stay updated with the latest features and changes.",
+  keywords: [
+    "Minecraft Utilities",
+    "Blog",
+    "Minecraft",
+    "Discord",
+    "Bot",
+    "Blogs and updates",
+    "Minecraft Updates",
+    "2024",
+    "Hypixel",
+    "Discord",
+    "Server",
+    "Support",
+    "Gaming",
+  ],
+};
 
 export async function generateStaticParams() {
   const totalPosts = posts.filter((post) => post.published).length;
