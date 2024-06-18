@@ -35,7 +35,7 @@ const terms = () => {
   return (
     <div>
       <Nav />
-      <div className="tos-container prose dark:prose-a:text-white dark:prose-strong:text-white dark:prose-headings:text-white mx-auto py-32">
+      <div className="tos-container prose prose-headings:text-black dark:prose-headings:text-white dark:prose-a:text-white dark:prose-p:text-white dark:prose-li:text-white dark:prose-strong:text-white mx-auto py-32">
         <h2>Terms of Service (TOS) for Minecraft Utilities Discord Bot</h2>
 
         <p>
