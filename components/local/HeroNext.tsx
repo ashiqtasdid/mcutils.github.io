@@ -25,9 +25,10 @@ const HeroNext = () => {
         setLoading(false);
       }
     };
-
     fetchData();
-  }, []);
+    console.log(data)
+  }, [data]);
+
 
   const animationVariants = {
     initial: {
